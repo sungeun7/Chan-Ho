@@ -1,0 +1,15 @@
+# 기본 실행: 표준 라이브러리만으로도 mock 음성 가능
+
+# 음성 합성 (TTS) — Windows 내장 SAPI 사용
+pyttsx3>=2.90
+
+# 음성 인식 (STT) — 마이크 + Google Web Speech
+SpeechRecognition>=3.10.0
+PyAudio>=0.2.14
+
+# 선택: Twilio SMS/전화
+# twilio>=9.0.0
+
+# 선택: 실제 센서 (라즈베리파이 등)
+# adafruit-circuitpython-max30102
+# smbus2

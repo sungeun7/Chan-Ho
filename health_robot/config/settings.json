@@ -1,0 +1,37 @@
+{
+  "monitoring": {
+    "interval_seconds": 2.0,
+    "history_size": 30
+  },
+  "thresholds": {
+    "heart_rate": { "low": 45, "high": 130 },
+    "spo2": { "low": 90 },
+    "temperature_c": { "low": 35.0, "high": 38.5 },
+    "fall_acceleration_g": 2.5
+  },
+  "emergency": {
+    "confirm_timeout_seconds": 15,
+    "dry_run": true,
+    "contacts": [
+      { "name": "보호자", "phone": "+821012345678", "priority": 1 },
+      { "name": "응급센터", "phone": "119", "priority": 2 }
+    ],
+    "message_template": "[건강로봇 응급알림]\n사용자 이상 징후 감지.\n상태: {level}\n사유: {reason}\n측정: 심박 {heart_rate}bpm, SpO2 {spo2}%, 체온 {temperature_c}°C\n시각: {timestamp}"
+  },
+  "robot": {
+    "name": "CareBot",
+    "speak_alerts": true
+  },
+  "voice": {
+    "enabled": true,
+    "tts": true,
+    "stt_mode": "auto",
+    "language": "ko-KR",
+    "rate": 170,
+    "volume": 1.0,
+    "listen_timeout": 5.0,
+    "max_retries": 2,
+    "listen_between_steps": false,
+    "mock_replies": ["괜찮아요"]
+  }
+}
